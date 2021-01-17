@@ -1,0 +1,28 @@
+@import "variables";
+@import "modules/header";
+@import "modules/hero";
+
+.bg-card {
+    background-color: $color-dark;
+    color: $color-text;
+}
+
+.btn-outline {
+    border-color: $color-secondary;
+    border-width: 0.125rem;
+    border-style: solid;
+
+    color: $color-secondary;
+}
+
+.header-desktop {
+    @include header-desktop;
+}
+
+.header-mobile {
+    @include header-mobile;
+}
+
+.hero {
+    @include hero-nav;
+}

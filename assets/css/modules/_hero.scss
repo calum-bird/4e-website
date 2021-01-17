@@ -1,0 +1,64 @@
+@mixin hero-nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    min-height: 20vh;
+    background-image: url(../media/img/background.jpg);
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    z-index: 9;
+    
+    .hero-inner {
+        width: 100%;
+        z-index: 10;
+
+        .hero-image {
+            max-height: 25vh;
+            margin-left: auto;
+            margin-right: auto;
+            transition: all 400ms;
+
+            &.fade {
+                max-height: 0;
+                opacity: 0;
+            }
+        }
+
+        h1 {
+            color: $color-text;
+            font-size: 5vw;
+            margin-top: 5rem;
+            transition: all 400ms;
+
+            &.fade {
+                font-size: 0;
+                margin-top: 0;
+                opacity: 0;
+            }
+        }
+    }
+    
+
+    &:before{
+        content: "";
+        background: rgba(#000, 0.5);
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        transition: background 400ms;
+    }
+    &.fixme{
+        &:before{
+            background: rgba(#000, 0.8);
+        }
+    }
+}

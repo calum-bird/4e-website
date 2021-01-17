@@ -1,0 +1,17 @@
+@import "breakpoints";
+
+@mixin header-desktop {
+    display: none;
+
+    @include bp('lg') {
+        display: block;
+    }
+}
+
+@mixin header-mobile {
+    display: block;
+    
+    @include bp('lg') {
+        display: none;
+    }
+}
